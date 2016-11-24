@@ -31,6 +31,8 @@ mySQLcursor.execute('SET character_set_connection=utf8')
 # 需要一个正则来搞，匹配不出来就直接pass，明儿再说吧
 patternReason = re.compile(u'\u56e0([\u4e00-\u9fa5]+)\u8bf7\u5047([\u4e00-\u9fa5]+|[\d]+[\u4e00-\u9fa5]+|[0-9]+[a-zA-Z]+|[0-9]\.[0-9]([\u4e00-\u9fa5]+)|[0-9]\.[0-9]([a-zA-Z]+))')
 # -----------------------------因-----------------------请假---------------后面就是同学们发明的各种的时间格式------------
+# 那些用续假来请假的，也是没谁了
+
 for eachLine in res:
     # print eachLine
     strContent = eachLine[8]
