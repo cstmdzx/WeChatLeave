@@ -7,7 +7,6 @@ import types
 from pysqlcipher import dbapi2 as sqlite
 from unixtime import timestamp_datetime
 
-# just a test
 
 reload(sys)  # 用来使后面的输出是中文
 sys.setdefaultencoding('utf-8')
