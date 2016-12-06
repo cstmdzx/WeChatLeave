@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+# set keyword to your own keyword at line 20
+# set keyword to your own mysql keyword at line
+
 import sys
 import MySQLdb
 import re
@@ -15,12 +18,12 @@ fileRes = open('res', 'w')
 sqlCipherConn = sqlite.connect('/home/nklyp/MicroMsg/9af554334ac9959186616787a46529bc/EnMicroMsg.db')
 # sqlCipherConn.set_character_set('utf8')
 sqlCipherCursor = sqlCipherConn.cursor()
-sqlCipherCursor.execute("PRAGMA key='keycode'")
+sqlCipherCursor.execute("PRAGMA key='keyword'")
 sqlCipherCursor.execute("PRAGMA cipher_use_hmac = off")
 sqlCipherCursor.execute('''select * from message where talker=\'3793351452@chatroom\'''')
 res = sqlCipherCursor.fetchall()
 # print res
-db = MySQLdb.connect('localhost', 'root', 'dbis23508468', 'WeChatLeave')
+db = MySQLdb.connect('localhost', 'root', 'mysql keyword', 'WeChatLeave')
 mySQLcursor = db.cursor()
 db.set_character_set('utf8')
 mySQLcursor.execute('SET NAMES utf8')

@@ -1,0 +1,5 @@
+select StudentName,count(*) 
+from WeChatLeave left outer join WeChatIdToName 
+on WeChatLeave.WeChatId = WeChatIdToName.WeChatId 
+where CreateTime > 1477929600 and CreateTime < 1480435200 --unix time stamp
+group by StudentName;
